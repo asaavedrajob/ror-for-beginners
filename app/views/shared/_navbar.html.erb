@@ -1,13 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <%= link_to "Navbar", root_path, class: "navbar-brand" %>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="/about">About</a>
+        <!-- It is highly recommended to use routes_paths -->
+        <%= link_to "Home", root_path, class: "nav-link" %>
+
+        <!-- 
+          - about_path (from routes) is better to handled a change like the following
+          From: <a class="nav-link" href="/about">About</a>
+          To: <a class="nav-link" href="/about-us">About</a>
+          - There won't be a reason to change it in all locations were the "/about" URL is used, the change would be only in routes.rb
+        -->
+        <%= link_to "About", about_path, class: "nav-link" %>
       </div>
     </div>
   </div>
