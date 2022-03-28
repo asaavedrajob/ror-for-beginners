@@ -29,4 +29,8 @@ Rails.application.routes.draw do
   # GET /sign_in
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
+
+  # GET /edit_password
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
 end
