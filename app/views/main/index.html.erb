@@ -13,6 +13,7 @@
         <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-secondary btn-lg px-4" %>
       <% else %>
         <%= link_to "Create an account", sign_up_path, class: "btn btn-primary btn-lg px-4 gap-3" %>
+        <%= link_to "Login", sign_in_path, class: "btn btn-outline-secondary btn-lg px-4" %>
       <% end %>      
     </div>
   </div>

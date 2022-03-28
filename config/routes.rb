@@ -25,4 +25,8 @@ Rails.application.routes.draw do
 
   # DELETE /logout
   delete "logout", to: "sessions#destroy"
+
+  # GET /sign_in
+  get "sign_in", to: "sessions#new"
+  post "sign_in", to: "sessions#create"
 end
