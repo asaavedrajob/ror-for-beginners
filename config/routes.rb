@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   # GET /sign_up
   get "sign_up", to: "registrations#new"
   post "sign_up", to: "registrations#create"
+
+  # DELETE /logout
+  delete "logout", to: "sessions#destroy"
 end

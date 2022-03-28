@@ -9,8 +9,11 @@
     <% end %>
         
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <%= link_to "Create an account", sign_up_path, class: "btn btn-primary btn-lg px-4 gap-3" %>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Right button</button>
+      <% if @user %>
+        <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-secondary btn-lg px-4" %>
+      <% else %>
+        <%= link_to "Create an account", sign_up_path, class: "btn btn-primary btn-lg px-4 gap-3" %>
+      <% end %>      
     </div>
   </div>
 </div>
