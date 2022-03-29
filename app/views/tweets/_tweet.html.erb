@@ -1,0 +1,18 @@
+ <div class="col">
+    <div class="card h-100 text-center">
+      <%= image_tag tweet.twitter_account.image, class: "rounded-circle img-thumbnail w-25 mx-auto mt-3" %>
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to tweet.twitter_account.get_username_lbl, tweet.twitter_account.get_twitter_url, target: :_blank %></h5>
+        <p class="card-text"><%= tweet.body %></p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">
+          <% if tweet.published? %>
+            <%= link_to "View Tweet", tweet.get_twitter_url, target: :_blank %>
+          <% else %>
+            Scheduled for <%= l tweet.publish_at, format: :long %>
+          <% end %>
+        </small>
+      </div>
+    </div>
+  </div>
