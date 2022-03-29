@@ -11,6 +11,7 @@
             <%= link_to "View Tweet", tweet.get_twitter_url, target: :_blank %>
           <% else %>
             Scheduled for <%= l tweet.publish_at, format: :long %>
+            <%= link_to "Edit Tweet", edit_tweet_path(tweet), class: "d-block" %>
           <% end %>
         </small>
       </div>
