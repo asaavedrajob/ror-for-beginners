@@ -6,6 +6,7 @@
 
 class User < ApplicationRecord
   has_many :twitter_accounts
+  has_many :tweets
   
   # has_secure_password is a rails method that will add the virtual fields password and password_confirmation to process the entered passwrod and fill the real field password_digest with an encrypted version of the string we assigned to the password/password_confirmation fields
   # has_secure_password requires the gem "bcrypt"

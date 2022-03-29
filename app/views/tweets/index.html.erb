@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center justify-content-between mb-5">
+  <h1>Tweets</h1>
+
+  <% if Current.user.twitter_accounts.any? %>
+    <%= link_to "Schedule a Tweet", new_tweet_path, class: "btn btn-primary px-4" %>
+  <% end %>
+
+  <% if Current.user.twitter_accounts.none? %>
+    <%= button_to "Connect your Twitter Account", "/auth/twitter", method: :post, class: "btn btn-primary px-4" %>
+  <% end %>
+</div>

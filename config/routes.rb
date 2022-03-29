@@ -45,4 +45,7 @@ Rails.application.routes.draw do
 
   # CRUD routes for TwitterAccount feature
   resources :twitter_accounts
+
+  # CRUD routes for Tweet feature
+  resources :tweets
 end
