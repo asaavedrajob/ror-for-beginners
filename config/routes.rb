@@ -39,4 +39,9 @@ Rails.application.routes.draw do
   post "password/reset", to: "password_resets#create"
   get "password/reset/edit", to: "password_resets#edit"
   patch "password/reset/edit", to: "password_resets#update"
+
+  # / GET /auth/twitter/callback
+  # get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
+  # Correct URL is the one above, but in the meantime twitter accepts my request to create the app I will create a fake URL
+  get "/authy/twitter/callback", to: "omniauth_callbacks#twitter"
 end

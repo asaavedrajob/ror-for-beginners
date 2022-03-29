@@ -10,6 +10,7 @@
         
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       <% if Current.user %>
+        <%= button_to "Connect your Twitter Account", "/auth/twitter", method: :post, class: "btn btn-primary btn-lg px-4 gap-3" %>
         <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-outline-secondary btn-lg px-4" %>
       <% else %>
         <%= link_to "Sign Up", sign_up_path, class: "btn btn-primary btn-lg px-4 gap-3" %>
