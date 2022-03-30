@@ -2,6 +2,9 @@ class TweetJob < ApplicationJob
   queue_as :default
 
   def perform(tweet)
+    # Using the command binding.irb, we can stop the process and interact with the variables (at this moment available), to verify that our ActiveJob is receiving the correct information
+    # binding.irb
+
     return if tweet.published?
 
     # Rescheduled a tweet to the future

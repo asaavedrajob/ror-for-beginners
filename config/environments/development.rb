@@ -70,4 +70,7 @@ Rails.application.configure do
 
   # Mailer configuration for "path_url" (Ex. password_reset_edit_url) when a :host parameter has to be provided
   config.action_mailer.default_url_options = { host: "localhost:3000" }
+
+  # Replace the default ActiveJobs manager
+  config.active_job.queue_adapter = :sidekiq
 end
