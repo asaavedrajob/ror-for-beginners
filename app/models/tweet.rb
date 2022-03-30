@@ -18,4 +18,9 @@ class Tweet < ApplicationRecord
   def get_twitter_url
     "https://twitter.com/#{twitter_account.username}/status/#{tweet_id}"
   end
+
+  def publish_to_twitter!
+    tweet = twitter_account.client.update(body)
+    update(tweet_id: tweet.id)
+  end
 end
